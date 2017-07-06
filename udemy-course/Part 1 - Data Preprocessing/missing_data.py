@@ -1,7 +1,3 @@
-#==============================================================================
-# Arvin
-#==============================================================================
-
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import Imputer
@@ -22,4 +18,3 @@ X[:, 1:3] = imputer.transform(X[:, 1:3])
 
 for data in X:
     print(data)
-    
