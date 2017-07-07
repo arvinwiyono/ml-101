@@ -47,3 +47,18 @@ scaled_X_train = sc_X.fit_transform(X)
 # already fitted, so just use transform()
 scaled_X_test = sc_X.transform(X_test)
 
+# Or you can scale only the age and salary exclusively
+# X_train[:, 3:5] = sc_X.fit_transform(X_train[:, 3:5])
+
+from sklearn.preprocessing import RobustScaler
+rbsc_X = StandardScaler()
+rbsc_X_train = rbsc_X.fit_transform(X_train)
+# already fitted, so just use transform()
+rbsc_X_test = rbsc_X.transform(X_test)
+
+from sklearn.preprocessing import MinMaxScaler
+min_max_sc_X = MinMaxScaler()
+min_max_X_train = min_max_sc_X.fit_transform(X_train)
+# already fitted, so just use transform()
+min_max_X_test = min_max_sc_X.transform(X_test)
+
