@@ -79,7 +79,7 @@ print("\n")
 # Therefore, in this case, the significant predictor is only the R&D spend
 # Now build the optimal regressor
 print("------------OPTIMAL MODEL---------------")
-X_train, X_test, y_train, y_test = train_test_split(X_opt, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X_opt[:, 1:2], y, test_size=0.2, random_state=0)
 opt_regressor = LinearRegression()
 opt_regressor.fit(X_train, y_train)
 y_pred_opt = opt_regressor.predict(X_test)
