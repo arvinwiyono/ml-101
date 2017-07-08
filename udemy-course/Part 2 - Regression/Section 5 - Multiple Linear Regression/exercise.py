@@ -38,3 +38,12 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 mae = mean_absolute_error(y_test, y_pred)
 mse = mean_squared_error(y_test, y_pred)
 print('Predicted vs Real errors:', mae, '||', mse)
+
+# Building the optimal model using Backward Elimination
+import statsmodels.formula.api as smf
+
+# this adds the ones at the end, but we want to put it at the beginning
+#X = np.append(arr=X, values = np.ones((len(X),1)), axis = 1)
+# this adds the ones at the beginning
+X = np.append(arr = np.ones((50,1)), values = X, axis = 1)
+
