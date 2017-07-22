@@ -49,7 +49,7 @@ labels = ['Not Purchased', 'Purchased']
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(x_set[y_set == j, 0], x_set[y_set == j, 1], c = color_map.colors[j], label = labels[j])
 
-plt.title('Logistic Regression (Train Set)')
+plt.title('Classifier (Train Set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
@@ -74,7 +74,7 @@ labels = ['Not Purchased', 'Purchased']
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(x_set[y_set == j, 0], x_set[y_set == j, 1], c = color_map.colors[j], label = labels[j])
 
-plt.title('Logistic Regression (Test Set)')
+plt.title('Classifier (Test Set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
