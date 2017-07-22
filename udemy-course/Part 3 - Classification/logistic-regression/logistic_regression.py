@@ -29,7 +29,7 @@ y_pred = classifier.predict(x_test)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred, labels = [0, 1])
 
-# visualisng train results
+# visualising train results
 from matplotlib.colors import ListedColormap
 x_set, y_set = x_train, y_train
 age_range = np.arange(x_set[:, 0].min()-1, x_set[:, 0].max()+1, 0.01)
@@ -54,7 +54,7 @@ plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 
-# visualisng test results
+# visualising test results
 from matplotlib.colors import ListedColormap
 x_set, y_set = x_test, y_test
 age_range = np.arange(x_set[:, 0].min()-1, x_set[:, 0].max()+1, 0.01)
