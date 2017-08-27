@@ -29,13 +29,15 @@ def gradient_descent_runner(points, learning_rate, starting_b, starting_m, num_i
     m = starting_m
     for i in range(num_iterations):
         b, m = step_gradient(b, m, points, learning_rate)
-        print("Iteration {:3d} | b: {:5f} | m: {:5f}".format(i+1, b, m))
+        if i % 100 == 0:
+            print("Iteration {:3d} | b: {:5f} | m: {:5f}".format(i+1, b, m))
     return (b, m)
 
 if __name__ == '__main__':
     current_dir = os.path.dirname(__file__)
     read_dir = './data/gradient_descent_data.csv'
-    full_path = os.path.join(current_dir, read_dir)
+    full_path = os.path.abspath(os.path.join(current_dir, read_dir))
+    print(full_path)
 
     df = pd.read_csv(full_path, names=['x', 'y'])
     print(df.head())
